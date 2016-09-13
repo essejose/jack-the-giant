@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Player : MonoBehaviour {
 
-    public float speed = 8f,
+    public float speed = 12f,
                  maxVelocity = 4f;
     //[SerializeField]
     private Rigidbody2D myBody;
@@ -27,19 +27,48 @@ public class Player : MonoBehaviour {
 
     void PlayerMoveKeyboard(){
         float forceX = 0f;
+        
         float vel = Mathf.Abs(myBody.velocity.x);
 
         float h = Input.GetAxisRaw("Horizontal");
 
-        if( h > 0){
+
+        /*        float forceY = 0f;
+                  fazer ele voar 
+                  float l = Input.GetAxisRaw("Vertical");
+                  Debug.Log(l);
+
+                if (l > 0)
+                {
+                    if (vel < maxVelocity)
+                        forceY = speed;
+
+                    myBody.AddForce(new Vector2(0, forceY += 10));
+                    anim.SetBool("Walk", true);
+                }
+                else if (l < 0)
+                {
+                    if (vel < maxVelocity)
+                        forceY = -speed;
+
+                    myBody.AddForce(new Vector2(0, forceY -= 10));
+                    anim.SetBool("Walk", true);
+                }
+                else
+                {
+                    anim.SetBool("Walk", false);
+                }
+
+
+            */
+        if ( h > 0){
             if(vel < maxVelocity)
                 forceX = speed;
 
             Vector3 temp = transform.localScale;
-            temp.x = 1.3f;
-
+            temp.x = 1.3f; 
             transform.localScale = temp;
-
+             
             anim.SetBool("Walk",true);
         }else if( h < 0)
         {
@@ -49,7 +78,7 @@ public class Player : MonoBehaviour {
             Vector3 temp = transform.localScale;
             temp.x = -1.3f;
             transform.localScale = temp;
-
+            
             anim.SetBool("Walk", true);
         }
         else
