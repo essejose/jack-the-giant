@@ -31,10 +31,11 @@ public class Player : MonoBehaviour {
         float vel = Mathf.Abs(myBody.velocity.x);
 
         float h = Input.GetAxisRaw("Horizontal");
+        //controle no telefone
+        //float h = Input.acceleration.x;
 
-
-        /*        float forceY = 0f;
-                  fazer ele voar 
+        /*      fazer ele voar 
+                float forceY = 0f; 
                   float l = Input.GetAxisRaw("Vertical");
                   Debug.Log(l);
 
