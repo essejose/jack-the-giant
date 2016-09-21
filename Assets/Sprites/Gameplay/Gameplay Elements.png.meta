@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: fb003100b00dc1341a5c0c87cabfae82
-timeCreated: 1472695770
+timeCreated: 1474425484
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -114,21 +114,22 @@ TextureImporter:
     - name: Coin
       rect:
         serializedVersion: 2
-        x: 205
+        x: 203
         y: 212
-        width: 41
+        width: 43
         height: 41
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: 11.5, y: 20.5}
-        - {x: -20.5, y: 20.5}
-        - {x: -20.5, y: -17.5}
-        - {x: -16.5, y: -20.5}
+      - - {x: -14.5, y: 20.5}
+        - {x: -21.5, y: 12.5}
+        - {x: -21.5, y: -17.5}
+        - {x: -14.5, y: -20.5}
         - {x: 17.5, y: -20.5}
-        - {x: 20.5, y: -13.5}
-        - {x: 20.5, y: 13.5}
+        - {x: 21.5, y: -14.5}
+        - {x: 21.5, y: 12.5}
+        - {x: 13.5, y: 20.5}
     - name: Clound 1
       rect:
         serializedVersion: 2
