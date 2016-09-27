@@ -71,7 +71,7 @@ public class PlayerScore : MonoBehaviour {
         }
 
 
-        if (target.tag == "Bounds")
+        if (target.tag == "Bounds" || target.tag == "Deadly")
         {
             cameraScript.moveCamera = false;
             countScore = false;
@@ -83,7 +83,7 @@ public class PlayerScore : MonoBehaviour {
             GameManager.instace.CheckGameStatus(scoreCount, coinCount, lifeCount);
         }
 
-        if (target.tag == "Deadly")
+/*        if (target.tag == "Deadly")
         {
             cameraScript.moveCamera = false;
             countScore = false;
@@ -95,7 +95,7 @@ public class PlayerScore : MonoBehaviour {
 
             GameManager.instace.CheckGameStatus(scoreCount, coinCount, lifeCount);
 
-        }
+        }*/
 
 
     }

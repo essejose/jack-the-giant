@@ -1,23 +1,44 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class HighscoreController : MonoBehaviour {
 
-    //exemp 1
-    //private GameplayController gc;
+    [SerializeField]
+    private Text scoreText, coinText;
 
-	// Use this for initialization
 	void Start () {
-        //exemp 1
-        //gc = GameObject.Find("GamePlay Controller").GetComponent<GameplayController>();
-        //gc.someMethod();
+        SetScoreBaseOnDifficulty();
 
-            
-        //using  public static mettho
-        //GameplayController.instance.someMethod();
-	}
+    }
 	
+
+    void SetScore(int score, int coinScore)
+    {
+      scoreText.text = score.ToString();
+      coinText.text = coinScore.ToString();
+
+    }
+
+    void SetScoreBaseOnDifficulty()
+    {
+        if(GamePreferences.GetEasyDifficultyState () == 1)
+        {
+            SetScore(GamePreferences.GetEasyDifficultyHighscore(), GamePreferences.GetEasyDifficultyCoinScore());
+        }
+        if (GamePreferences.GetMediumDifficultyState() == 1)
+        {
+            SetScore(GamePreferences.GetMediumDifficultyHighscore(), GamePreferences.GetMediumDifficultyCoinScore());
+        }
+        if (GamePreferences.GetHardDifficultyState() == 1)
+        {
+            SetScore(GamePreferences.GetHardDifficultyHighscore(), GamePreferences.GetHardDifficultyCoinScore());
+        }
+
+       
+    }
+
 	public void GoBackToMain()
     {
         SceneManager.LoadScene("MainMenu");
