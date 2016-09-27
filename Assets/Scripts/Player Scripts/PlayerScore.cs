@@ -74,7 +74,10 @@ public class PlayerScore : MonoBehaviour {
         if (target.tag == "Bounds")
         {
             cameraScript.moveCamera = false;
-            countScore = false; 
+            countScore = false;
+
+            GameplayController.instance.GameOverShowPanel(scoreCount, coinCount);
+
             transform.position = new Vector3(500, 500, 0);
             lifeCount--;
 
@@ -84,7 +87,9 @@ public class PlayerScore : MonoBehaviour {
         {
             cameraScript.moveCamera = false;
             countScore = false;
-             
+
+            GameplayController.instance.GameOverShowPanel(scoreCount, coinCount);
+
             transform.position = new Vector3(500, 500, 0);
             lifeCount--;
 
