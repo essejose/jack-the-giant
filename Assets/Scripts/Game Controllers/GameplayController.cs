@@ -10,21 +10,17 @@ public class GameplayController : MonoBehaviour {
 
     [SerializeField]
     private Text scoreText, coinText, lifeText, gameOverScoreText, gameOverCoinText;
-
-
+     
     [SerializeField]
     private GameObject pausePanel, gameOverPanel;
 
     [SerializeField]
     private Button readyButton;
-
-
-
+     
     void Awake() {
         MakeInstance();	
 	}
-	
-
+	 
     void Start()
     {
         Time.timeScale = 0f;
@@ -91,6 +87,7 @@ public class GameplayController : MonoBehaviour {
         Time.timeScale = 1f;
         readyButton.gameObject.SetActive(false);
     }
+
 
    /* public void someMethod()
     {
