@@ -11,6 +11,7 @@ public class MainMenuController : MonoBehaviour {
 	
 	public void StartGame()
     {
+        GameManager.instace.gameStartedFromMainMenu = true;
         SceneManager.LoadScene("Gameplay");
     }
     public void HightscoreMenu()
