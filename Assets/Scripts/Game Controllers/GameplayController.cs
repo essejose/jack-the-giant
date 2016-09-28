@@ -3,31 +3,33 @@ using System.Collections;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class GameplayController : MonoBehaviour {
+public class GameplayController : MonoBehaviour
+{
 
 
     public static GameplayController instance;
 
     [SerializeField]
     private Text scoreText, coinText, lifeText, gameOverScoreText, gameOverCoinText;
-     
+
     [SerializeField]
     private GameObject pausePanel, gameOverPanel;
 
     [SerializeField]
     private Button readyButton;
-     
-    void Awake() {
-        MakeInstance();	
-	}
-	 
+
+    void Awake()
+    {
+        MakeInstance();
+    }
+
     void Start()
     {
         Time.timeScale = 0f;
     }
-	void MakeInstance()
+    void MakeInstance()
     {
-        if(instance == null)
+        if (instance == null)
         {
             instance = this;
         }
@@ -45,7 +47,8 @@ public class GameplayController : MonoBehaviour {
 
 
 
-    public void PlayerDiedRestartTheGame() {
+    public void PlayerDiedRestartTheGame()
+    {
         StartCoroutine(PlayerDieRestart());
     }
 
@@ -101,9 +104,8 @@ public class GameplayController : MonoBehaviour {
     }
 
 
-   /* public void someMethod()
-    {
-
-    }*/
+    /* public void someMethod()
+     {
+     }*/
 
 }

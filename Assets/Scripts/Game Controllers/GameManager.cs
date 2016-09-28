@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour
     [HideInInspector]
     public int score, coinScore, lifeScore;
 
-    
+
     void Awake()
     {
         MakeSingleton();
@@ -26,7 +26,7 @@ public class GameManager : MonoBehaviour
 
     void OnLevelWasLoaded()
     {
-       
+
         if (SceneManager.GetActiveScene().name == "Gameplay")
         {
             if (gameRestartAfterPlayerDied)
@@ -36,12 +36,12 @@ public class GameManager : MonoBehaviour
                 GameplayController.instance.SetLifeScore(lifeScore);
 
                 PlayerScore.scoreCount = score;
-                PlayerScore.coinCount = coinScore; 
+                PlayerScore.coinCount = coinScore;
                 PlayerScore.lifeCount = lifeScore;
             }
-            else if( gameStartedFromMainMenu)
+            else if (gameStartedFromMainMenu)
             {
-
+               
                 PlayerScore.scoreCount = 0;
                 PlayerScore.coinCount = 0;
                 PlayerScore.lifeCount = 2;
@@ -58,8 +58,8 @@ public class GameManager : MonoBehaviour
     void InicializeVariable()
     {
 
-        
-        if(!PlayerPrefs.HasKey("Game Initialized"))
+
+        if (!PlayerPrefs.HasKey("Game Initialized"))
         {
             GamePreferences.SetEasyDifficultyState(0);
             GamePreferences.SetEasyDifficultyCoinScore(0);
@@ -68,7 +68,7 @@ public class GameManager : MonoBehaviour
             GamePreferences.SetMediumDifficultyState(1);
             GamePreferences.SetMediumDifficultyCoinScore(0);
             GamePreferences.SetMediumDifficultyHighscore(0);
-             
+
             GamePreferences.SetHardDifficultyState(0);
             GamePreferences.SetHardDifficultyCoinScore(0);
             GamePreferences.SetHardDifficultyHighscore(0);
@@ -91,23 +91,23 @@ public class GameManager : MonoBehaviour
             instace = this;
             DontDestroyOnLoad(gameObject);
         }
-            
+
     }
 
     public void CheckGameStatus(int score, int coinScore, int lifeScore)
     {
-        if(lifeScore < 0)
+        if (lifeScore < 0)
         {
 
-            if(GamePreferences.GetEasyDifficultyState() == 1)
+            if (GamePreferences.GetEasyDifficultyState() == 1)
             {
                 int highScore = GamePreferences.GetEasyDifficultyHighscore();
                 int coinHighScore = GamePreferences.GetEasyDifficultyCoinScore();
 
-                if(highScore < score)
+                if (highScore < score)
                     GamePreferences.SetEasyDifficultyHighscore(score);
 
-                if(coinHighScore < coinScore)
+                if (coinHighScore < coinScore)
                     GamePreferences.SetEasyDifficultyHighscore(coinScore);
             }
 
@@ -140,12 +140,12 @@ public class GameManager : MonoBehaviour
             gameRestartAfterPlayerDied = false;
 
             //game player controller
-            GameplayController.instance.GameOverShowPanel(score,coinScore);
+            GameplayController.instance.GameOverShowPanel(score, coinScore);
         }
         else
         {
 
-        
+
             this.score = score;
             this.coinScore = coinScore;
             this.lifeScore = lifeScore;
