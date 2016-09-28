@@ -145,9 +145,7 @@ public class GameManager : MonoBehaviour
         else
         {
 
-            Debug.Log(score);
-            Debug.Log(coinScore);
-            Debug.Log(lifeScore);
+        
             this.score = score;
             this.coinScore = coinScore;
             this.lifeScore = lifeScore;
