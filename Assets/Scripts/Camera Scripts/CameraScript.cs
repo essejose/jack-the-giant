@@ -3,13 +3,13 @@ using System.Collections;
 
 public class CameraScript : MonoBehaviour {
 
-    private float speed = 1f;
-    private float acceleration = 0.2f;
+    private float speed = 3f;
+    private float acceleration = 3.2f;
     private float maxSpeed = 3.2f;
 
     private float easySpeed = 3.4f;
     private float mediumSpeed = 4.8f;
-    private float hardSpeed = 4.2f;
+    private float hardSpeed = 152.2f;
 
 
     [HideInInspector]
@@ -33,6 +33,7 @@ public class CameraScript : MonoBehaviour {
             maxSpeed = hardSpeed;
         }
 
+       
         moveCamera = true;
 	}
 	
@@ -55,7 +56,12 @@ public class CameraScript : MonoBehaviour {
         transform.position = temp;
 
         speed += acceleration * Time.deltaTime;
-        if (speed > maxSpeed)
+        if (speed > maxSpeed) {
             speed = maxSpeed;
+        }
+
+        Debug.Log(speed);
+
+        
     }
 }
