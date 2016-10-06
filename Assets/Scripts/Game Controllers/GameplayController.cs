@@ -101,6 +101,8 @@ public class GameplayController : MonoBehaviour
     {
         Time.timeScale = 1f;
         readyButton.gameObject.SetActive(false);
+
+        
     }
 
 
