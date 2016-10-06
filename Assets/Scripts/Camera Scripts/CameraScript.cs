@@ -60,7 +60,7 @@ public class CameraScript : MonoBehaviour {
             speed = maxSpeed;
         }
 
-        Debug.Log(speed);
+    
 
         
     }
