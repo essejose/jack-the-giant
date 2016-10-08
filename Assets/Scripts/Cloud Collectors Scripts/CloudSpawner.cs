@@ -138,7 +138,7 @@ public class CloudSpawner : MonoBehaviour
             }
         }
 
-        temp.y += 0.8f;
+        temp.y += 0.4f;
         player.transform.position = temp;
     }
 
@@ -190,7 +190,7 @@ public class CloudSpawner : MonoBehaviour
                             if (!collectables[random].activeInHierarchy)
                             {
                                 Vector3  temp2 = clouds[i].transform.position;
-                                temp2.y += 0.7f;
+                                temp2.y += 0.4f;
                                 if(collectables[random].tag == "Life")
                                 {
                                     if(PlayerScore.lifeCount < 2)

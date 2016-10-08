@@ -108,7 +108,7 @@ public class GameManager : MonoBehaviour
                     GamePreferences.SetEasyDifficultyHighscore(score);
 
                 if (coinHighScore < coinScore)
-                    GamePreferences.SetEasyDifficultyHighscore(coinScore);
+                    GamePreferences.SetEasyDifficultyCoinScore(coinScore);
             }
 
             if (GamePreferences.GetMediumDifficultyState() == 1)
@@ -120,7 +120,7 @@ public class GameManager : MonoBehaviour
                     GamePreferences.SetMediumDifficultyHighscore(score);
 
                 if (coinHighScore < coinScore)
-                    GamePreferences.SetMediumDifficultyHighscore(coinScore);
+                    GamePreferences.SetMediumDifficultyCoinScore(coinScore);
             }
 
             if (GamePreferences.GetHardDifficultyState() == 1)
@@ -132,7 +132,7 @@ public class GameManager : MonoBehaviour
                     GamePreferences.SetHardDifficultyHighscore(score);
 
                 if (coinHighScore < coinScore)
-                    GamePreferences.SetHardDifficultyHighscore(coinScore);
+                    GamePreferences.SetHardDifficultyCoinScore(coinScore);
             }
 
 
