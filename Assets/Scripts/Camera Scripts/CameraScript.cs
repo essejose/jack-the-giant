@@ -7,9 +7,9 @@ public class CameraScript : MonoBehaviour {
     private float acceleration = 3.2f;
     private float maxSpeed = 33.2f;
 
-    private float easySpeed = 13.4f;
-    private float mediumSpeed = 34.8f;
-    private float hardSpeed = 152.2f;
+    private float easySpeed = 1213.4f;
+    private float mediumSpeed = 1534.8f;
+    private float hardSpeed = 2252.2f;
 
 
     [HideInInspector]
@@ -56,7 +56,8 @@ public class CameraScript : MonoBehaviour {
         transform.position = temp;
 
         speed += acceleration * Time.deltaTime;
-        
+
+        Debug.Log(speed);
         if (speed > maxSpeed) {
             speed = maxSpeed;
         }
