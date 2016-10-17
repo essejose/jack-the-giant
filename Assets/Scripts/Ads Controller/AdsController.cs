@@ -41,8 +41,8 @@ public class AdsController : MonoBehaviour {
 
         if (SceneManager.GetActiveScene().name == "Gameplay" || SceneManager.GetActiveScene().name == "OptionsMenu" || SceneManager.GetActiveScene().name == "HighscoreMenu")
         {
-            ShowBanner();
-            ShowInterstitial();
+            //ShowBanner();
+            //ShowInterstitial();
         }
     }
     // Returns an ad request with custom ad targeting.
